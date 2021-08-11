@@ -33,10 +33,10 @@ exploring the data, and getting acquainted with the 3 tables. */
 /* QUESTIONS 
 /* Q1: Some of the facilities charge a fee to members, but some do not.
 Write a SQL query to produce a list of the names of the facilities that do. */
-	SELECT * FROM `Facilities` WHERE membercost > 0.0
+	SELECT * FROM Facilities WHERE membercost > 0.0
 
 /* Q2: How many facilities do not charge a fee to members? */
-	SELECT * FROM `Facilities` WHERE membercost = 0.0
+	SELECT * FROM Facilities WHERE membercost = 0.0
 
 /* Q3: Write an SQL query to show a list of facilities that charge a fee to members,
 where the fee is less than 20% of the facility's monthly maintenance cost.
@@ -74,7 +74,7 @@ formatted as a single column. Ensure no duplicate data, and order by
 the member name. */
 
 	SELECT DISTINCT F.name, (CONCAT( M.firstName,' ', M.surname ) ) AS membername 
-		FROM Bookings AS B 
+	FROM Bookings AS B 
 	INNER JOIN Members AS M
 		ON B.memid = M.memid
 	INNER JOIN Facilities AS F
@@ -107,7 +107,7 @@ Order by descending cost, and do not use any subqueries. */
 
 	SELECT DISTINCT F.name, CONCAT(M.firstname,' ',M.surname)as membername,
 	CASE WHEN B.memid = 0 THEN (F.guestcost *B.slots)
-	WHEN B.memid != 0 THEN (F.membercost *B.slots)END AS cost  
+		WHEN B.memid != 0 THEN (F.membercost *B.slots)END AS cost  
 	FROM (SELECT * FROM `Bookings`WHERE starttime BETWEEN '2012-09-14' AND '2012-09-15') AS B
 	LEFT JOIN Members AS M ON B.memid = M.memid
 	LEFT JOIN Facilities AS F ON B.facid = F.facid
@@ -134,8 +134,7 @@ that there's a different cost for guests and members! */
         ORDER BY revenue DESC
 
 /* Q11: Produce a report of members and who recommended them in alphabetic surname,firstname order */
-	SELECT mem.surname,mem.firstname,
-    	(rec.surname ||' '||rec.firstname)as recommender
+	SELECT mem.surname,mem.firstname,(rec.surname ||' '||rec.firstname)as recommender
     	FROM Members AS mem 
     	INNER JOIN Members rec
     	WHERE mem.recommendedby = rec.memid AND mem.recommendedby > 0 
