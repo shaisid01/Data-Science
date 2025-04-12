@@ -75,6 +75,8 @@ This project aims to predict potential churn customers, and it is realized that 
 ![image](https://github.com/user-attachments/assets/e44f592d-0529-438f-9ae1-0ee755674912)
 ![image](https://github.com/user-attachments/assets/c2786b3b-1f1e-4fc8-870b-e78a41024d13)
 
+#### Metrics Comparison
+![image](https://github.com/user-attachments/assets/7ba2ec0c-3aad-4dab-ba6e-839552877ca4)
 
 #### Best Performing Models:
 
