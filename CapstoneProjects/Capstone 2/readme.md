@@ -68,7 +68,7 @@ This project aims to predict potential churn customers, and it is realized that 
 <br />5. Evaluate on the test data
 <br />6. compare train and test results
 #### Logistic Regression: Metrics Evaluation
-![image](https://user-images.githubusercontent.com/87315447/160265508-8b2646d5-cf07-4dc5-977f-c4348d797205.png)
+![image]![image](https://github.com/user-attachments/assets/b35f6d71-b0b8-4a75-8daf-f4da698bb4ba)
 #### XGBoost Classification: Metric Evaluation
 ![image](https://user-images.githubusercontent.com/87315447/160265543-3b053216-0ecb-4b40-872b-7f6cf45f4b4d.png)
 #### ROC_AUC Curve Evaluation
