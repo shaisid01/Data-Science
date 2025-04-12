@@ -67,13 +67,14 @@ This project aims to predict potential churn customers, and it is realized that 
 <br />4. Pick the threshold (using the training data)
 <br />5. Evaluate on the test data
 <br />6. compare results
-#### Logistic Regression: Metrics Evaluation
-![alt text](image.png)
-![alt text](image-1.png)
-#### XGBoost Classification: Metric Evaluation
-![image](https://user-images.githubusercontent.com/87315447/160265543-3b053216-0ecb-4b40-872b-7f6cf45f4b4d.png)
-#### ROC_AUC Curve Evaluation
-![image](https://user-images.githubusercontent.com/87315447/160265589-081d9530-7c26-4cfd-adca-62c410c0767e.png)
+#### Random Forest with Grid SearchCV: Metrics Evaluation
+![image](https://github.com/user-attachments/assets/864247e4-b2d7-4c3e-b968-20e2fa4ae235)
+![image](https://github.com/user-attachments/assets/1be2a121-2825-4b43-af49-af4bd1b4073f)
+
+#### XGBoost with GridSerachCV Classification: Metric Evaluation
+![image](https://github.com/user-attachments/assets/e44f592d-0529-438f-9ae1-0ee755674912)
+![image](https://github.com/user-attachments/assets/c2786b3b-1f1e-4fc8-870b-e78a41024d13)
+
 
 #### Best Performing Models:
 
