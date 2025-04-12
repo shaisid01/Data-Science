@@ -52,11 +52,9 @@ Steps followed to build model are -
 <br />5. Evaluate on the test data
 <br />6. Make sure to compare train and test results (generally perform worse on test)
 #### Model used are
-1. naive model
-<br />2. Logistic Regression
-<br />3. Random Forest Classification
-<br />4. KNeighbours Classification
-<br />5. XGBoost Classification
+<br />1. Logistic Regression
+<br />2. Random Forest Classification
+<br />3. XGBoost Classification
 #### Evaluation Metrics
 This project aims to predict potential churn customers, and it is realized that the client cost of mistakenly classifying non-churn customers as churn may be high in practice because banks would not want to lose valuable customers, and the banks would like to identify churners at their best efforts as well. Thus, it would be useful to consider Recall. To complement this Receiver Operating Characteristic curve (ROC) is used. ROC is a plot of True Positive Rate (TPR) against False Positive Rate (FPR). This means I can consider TPR and FPR simultaneously, by making use of the area under the curve (AUC) of ROC. 
 <br />TPR or Recall or Sensitivity tells us what proportion of the positive class got correctly classified. TPR = TP/(TP+FN)
