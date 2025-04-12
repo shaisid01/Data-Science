@@ -52,11 +52,9 @@ Steps followed to build model are -
 <br />5. Evaluate on the test data
 <br />6. Make sure to compare train and test results (generally perform worse on test)
 #### Model used are
-1. naive model
-<br />2. Logistic Regression
-<br />3. Random Forest Classification
-<br />4. KNeighbours Classification
-<br />5. XGBoost Classification
+<br />1. Logistic Regression
+<br />2. Random Forest Classification
+<br />3. XGBoost Classification
 #### Evaluation Metrics
 This project aims to predict potential churn customers, and it is realized that the client cost of mistakenly classifying non-churn customers as churn may be high in practice because banks would not want to lose valuable customers, and the banks would like to identify churners at their best efforts as well. Thus, it would be useful to consider Recall. To complement this Receiver Operating Characteristic curve (ROC) is used. ROC is a plot of True Positive Rate (TPR) against False Positive Rate (FPR). This means I can consider TPR and FPR simultaneously, by making use of the area under the curve (AUC) of ROC. 
 <br />TPR or Recall or Sensitivity tells us what proportion of the positive class got correctly classified. TPR = TP/(TP+FN)
@@ -75,13 +73,25 @@ This project aims to predict potential churn customers, and it is realized that 
 ![image](https://user-images.githubusercontent.com/87315447/160265543-3b053216-0ecb-4b40-872b-7f6cf45f4b4d.png)
 #### ROC_AUC Curve Evaluation
 ![image](https://user-images.githubusercontent.com/87315447/160265589-081d9530-7c26-4cfd-adca-62c410c0767e.png)
-#### Summary
-</br>● XGBoost and Logistic regression is performing well on both training and test set.
-</br>● RandomForest is the same as naive. Model does not have the ability to predict defaults
-and non-defaults.
-</br>● KNeighbors is overfitting
-#### Additional Models
-</br>● It would be interesting to see the results of other models, meaning trying different algorithms
-</br>● Making combination or hybrid models, e.g. RF + TensorFlow
-</br>● Trying feature crosses like dmatrix from patsy
-</br>● Clustering or association rules
+
+#### Best Performing Models:
+
+XGBoost: The model shows high performance on both the training and test datasets, with precision and recall above 0.95 for both classes. It provides a balanced approach with high F1-scores.
+
+Random Forest: Also provides very good performance with precision and recall both equal to 1.0 on the training set. It performs well on the test set, but slightly lower than XGBoost.
+
+#### Conclusion:
+
+For best overall performance, XGBoost seems to be the most balanced model with high precision, recall, and F1-score across both train and test sets.
+
+For class imbalance, Logistic Regression with Threshold Adjustment or Logistic Regression SMOTE may help, but models like Random Forest and XGBoost generally outperform these in terms of overall performance.
+
+#### Improvements
+
+PCA is lowering the performance, so feature selection techniques like Recursive Feature Elimination (RFE) or Lasso Regression to identify the most important features can be tried.
+
+Hyperparameter Tuning: Grid Search or Randomized Search can be used to find the optimal hyperparameters for the models. For models like Random Forest, XGBoost, or Logistic Regression, tweaking parameters such as max_depth, learning_rate, n_estimators, and others can improve performance
+
+Cross-validation helps to ensure that the model is not overfitting to the training data and generalizes well to unseen data. Use k-fold cross-validation to get a better estimate of the model's performance.
+
+Ensemble methods like Voting Classifier, Stacking, or Boosting (e.g., ADABoost) combine multiple models to improve the overall prediction. Sometimes, combining models like Logistic Regression and Random Forest into a voting classifier can improve results.
